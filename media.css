@@ -1,0 +1,51 @@
+/*Watermark*/
+:root:before {
+
+    /*display: none;*/
+    display: block;
+
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    font-size: 5em;
+    color: #000000;
+    opacity: 0.10;
+    top: 0;
+    z-index: 1000;
+}
+
+@media (min-width: 1281px) {
+    :root:before {
+        content: "Big Screens ";
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    :root:before {
+        content: "Laptops, Desktops";
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    :root:before {
+        content: "Tablets, Ipads (portrait)";
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    :root:before {
+        content: "Tablets, Ipads (landscape)";
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    :root:before {
+        content: "Low Resolution Tablets, Mobiles (Landscape)";
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    :root:before {
+        content: "Most of the Smartphones Mobiles (Portrait) ";
+    }
+}
